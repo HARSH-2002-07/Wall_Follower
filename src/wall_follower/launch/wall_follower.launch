@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="wall_follower" type="wall_follower_node.py" name="wall_follower" output="screen"/>
+    <node pkg="wall_follower" type="marker_detector.py" name="marker_detector" output="screen"/>
+</launch>

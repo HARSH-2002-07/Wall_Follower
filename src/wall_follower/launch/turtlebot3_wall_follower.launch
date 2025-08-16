@@ -1,0 +1,13 @@
+<launch>
+  <!-- Set TurtleBot3 model -->
+  <arg name="model" default="burger"/>
+  <env name="TURTLEBOT3_MODEL" value="$(arg model)"/>
+
+  <!-- Launch Gazebo with TurtleBot3 in empty world -->
+  <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch">
+    <arg name="model" value="$(arg model)"/>
+  </include>
+
+  <!-- Start wall follower node -->
+  <node pkg="wall_follower" type="wall_follower_node.py" name="wall_follower" output="screen"/>
+</launch>

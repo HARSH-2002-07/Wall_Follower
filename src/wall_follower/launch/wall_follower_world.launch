@@ -1,0 +1,6 @@
+<launch>
+  <arg name="world_file" default="$(find wall_follower)/worlds/test_world.world"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_file)"/>
+  </include>
+</launch>
